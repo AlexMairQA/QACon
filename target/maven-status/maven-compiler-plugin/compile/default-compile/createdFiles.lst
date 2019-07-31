@@ -1,0 +1,15 @@
+persistence\domain\MPIPK.class
+service\ProgramItemService.class
+persistence\repository\MemberRepositoryImpl.class
+persistence\repository\MemberRepository.class
+persistence\domain\ProgramItem.class
+service\MemberServiceImpl.class
+persistence\repository\ProgramItemRepo.class
+rest\JAXActivator.class
+rest\ProgramItemController.class
+persistence\domain\Members_ProgramItems.class
+com\qa\util\JSONUtil.class
+persistence\domain\Members.class
+rest\MemberController.class
+service\MemberService.class
+rest\MemberControllerImpl.class
