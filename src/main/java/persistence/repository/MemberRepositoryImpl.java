@@ -37,7 +37,7 @@ public class MemberRepositoryImpl implements MemberRepository {
 		TypedQuery<Members> query = em.createQuery("SELECT m FROM Members m WHERE m.firstName='" + firstName
 				+ "' AND m.lastName='" + lastName + "' AND m.password='" + password + "'", Members.class);
 
-		return jsonA.getJSONForObject(query.getResultList());
+		return jsonA.getJSONForObject(query.getSingleResult());
 	}
 
 	@Transactional(value = TxType.REQUIRED)

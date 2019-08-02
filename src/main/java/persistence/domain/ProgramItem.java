@@ -29,6 +29,14 @@ public class ProgramItem {
 		return description;
 	}
 
+	public Integer getPanelId() {
+		return panelId;
+	}
+
+	public void setPanelId(Integer panelId) {
+		this.panelId = panelId;
+	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}

@@ -1,6 +1,9 @@
 package rest;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
 import service.ProgramItemService;
@@ -11,6 +14,7 @@ public class ProgramItemController {
 	@Inject
 	ProgramItemService prog;
 
+	@GET
 	@Path("/getAll")
 	public String getAllProgramItems() {
 
@@ -18,12 +22,14 @@ public class ProgramItemController {
 
 	}
 
+	@POST
 	@Path("/addProg")
 	public String addProgramItem(String programItem) {
 
 		return prog.addProgramItem(programItem);
 	}
 
+	@DELETE
 	@Path("deleteProg")
 	public String deleteProgramItem(Integer programId) {
 
