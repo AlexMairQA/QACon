@@ -16,9 +16,9 @@ public class MemberServiceImpl implements MemberService {
 		return this.memRepo.getAllMembers();
 	}
 
-	public String getAccount(String firstName, String lastName, String password) {
+	public String getAccount(String email, String password) {
 
-		return memRepo.getAccount(firstName, lastName, password);
+		return memRepo.getAccount(email, password);
 	}
 
 	public String addMember(String member) {

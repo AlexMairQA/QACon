@@ -23,11 +23,10 @@ public class MemberControllerImpl implements MemberController {
 	}
 
 	@GET
-	@Path("/getAccount/{firstName}/{lastName}/{password}")
-	public String getAccount(@PathParam("firstName") String firstName, @PathParam("lastName") String lastName,
-			@PathParam("password") String password) {
+	@Path("/getAccount/{email}/{password}")
+	public String getAccount(@PathParam("email") String email, @PathParam("password") String password) {
 
-		return memServ.getAccount(firstName, lastName, password);
+		return memServ.getAccount(email, password);
 	}
 
 	@POST

@@ -33,9 +33,10 @@ public class MemberRepositoryImpl implements MemberRepository {
 	}
 
 	@Transactional(value = TxType.REQUIRED)
-	public String getAccount(String firstName, String lastName, String password) {
-		TypedQuery<Members> query = em.createQuery("SELECT m FROM Members m WHERE m.firstName='" + firstName
-				+ "' AND m.lastName='" + lastName + "' AND m.password='" + password + "'", Members.class);
+	public String getAccount(String email, String password) {
+		TypedQuery<Members> query = em.createQuery(
+				"SELECT m FROM Members m WHERE m.email='" + email + "' AND m.password='" + password + "'",
+				Members.class);
 
 		return jsonA.getJSONForObject(query.getSingleResult());
 	}
